@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # Copyright (C) 2016 Canonical
-#   
+#
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
 # as published by the Free Software Foundation; either version 2
@@ -39,7 +39,7 @@ fi
 #
 for fs in ${ZFSFS}
 do
-	zfs create ${POOL}/$fs 
+	zfs create ${POOL}/$fs
 	ret=$?
 	if [ $ret -ne 0 ]; then
 		echo "FAILED: zfs create filesystem $fs failed, exit code=$ret"
@@ -47,7 +47,7 @@ do
 		rm ${VDEV0} ${VDEV1}
 		exit 1
 	fi
-	
+
 	zfs set quota=128M ${POOL}/$fs
 	ret=$?
 	if [ $ret -ne 0 ]; then
@@ -72,7 +72,7 @@ done
 #
 for fs in ${ZFSFS}
 do
-	zfs destroy ${POOL}/$fs 
+	zfs destroy ${POOL}/$fs
 	ret=$?
 	if [ $ret -ne 0 ]; then
 		echo "FAILED: zfs destroy filesystem $fs failed, exit code=$ret"

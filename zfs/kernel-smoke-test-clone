@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # Copyright (C) 2016 Canonical
-#   
+#
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
 # as published by the Free Software Foundation; either version 2
@@ -64,7 +64,7 @@ if [ $ret -ne 0 ]; then
 fi
 
 #
-# Clone 
+# Clone
 #
 zfs clone ${POOL}/test@snap ${POOL}/test-clone
 
