@@ -1,0 +1,4 @@
+Tests: aufs-smoke-test
+Restrictions: needs-root
+Depends: @
+
